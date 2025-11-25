@@ -49,7 +49,7 @@
         dkrt: dkrt {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_WIN &kp LCTRL &kp RIGHT>;
+            bindings = <&kp LCTRL &kp LEFT_WIN &kp RIGHT>;
             label = "DKRT";
             wait-ms = <30>;
         };
