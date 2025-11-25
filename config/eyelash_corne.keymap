@@ -51,6 +51,7 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_WIN &kp LCTRL &kp RIGHT>;
             label = "DKRT";
+            wait-ms = <30>;
         };
 
         dklf: dklf {
