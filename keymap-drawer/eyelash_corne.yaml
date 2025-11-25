@@ -13,7 +13,7 @@ layers:
   - I
   - O
   - P
-  - {t: '$$mdi:backspace$$', type: backspace}
+  - $$mdi:backspace-reverse-outline$$
   - $$mdi:apple-keyboard-shift$$
   - A
   - S
@@ -72,8 +72,8 @@ layers:
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
+  - '~'
   - KP DIVIDE
-  - KP MULTIPLY
   - {t: Sft+\, s: Sft+|}
   - {t: '[', s: '{'}
   - {t: ']', s: '}'}
@@ -90,8 +90,8 @@ layers:
   - '&dkrt'
   - {t: '-', s: _}
   - {t: '=', s: +}
+  - HOME
   - END
-  - PG DN
   - RGB OFF
   - RGB BRI
   - RGB BRD
@@ -111,7 +111,7 @@ layers:
   - F8
   - F9
   - F10
-  - {t: '$$mdi:backspace$$', type: backspace}
+  - F11
   - {t: '$$mdi:transfer$$', type: trans}
   - PREVIOUS
   - $$mdi:skip-next$$
