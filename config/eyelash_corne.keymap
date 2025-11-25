@@ -61,17 +61,10 @@
             label = "DKLF";
         };
 
-        test: test {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&none &kp>;
-            label = "TEST";
-        };
-
         asdf: asdf {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LCTRL &kp V &kp RIGHT>;
+            bindings = <&kp LCTRL &kp V>;
             label = "ASDF";
             wait-ms = <30>;
         };
