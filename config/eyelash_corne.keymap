@@ -93,10 +93,10 @@
         lower_layer {
             display-name = "NUMBER";
             bindings = <
-&asdf   &kp N1          &kp N2           &kp N3           &kp N4           &kp N5                                         &mmv MOVE_UP                     &kp N6           &kp N7           &kp N8             &kp N9            &kp N0             &kp PAGE_UP
-&trans  &kp LEFT_ARROW  &kp UP_ARROW     &bt BT_SEL 1     &bt BT_SEL 2     &none                          &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp KP_DIVIDE    &kp KP_MULTIPLY  &kp RS(BACKSLASH)  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PAGE_DOWN
-&trans  &kp DOWN_ARROW  &kp RIGHT_ARROW  &rgb_ug RGB_ON   &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &kp C_MUTE                    &mmv MOVE_DOWN                   &dklf            &dkrt            &kp MINUS          &kp EQUAL         &kp END            &kp PG_DN
-                                         &rgb_ug RGB_OFF  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD                                                                 &kp RIGHT_SHIFT  &kp RCTRL        &trans
+&kp ESCAPE  &kp N1          &kp N2           &kp N3           &kp N4           &kp N5                                         &mmv MOVE_UP                     &kp N6           &kp N7           &kp N8             &kp N9            &kp N0             &kp PAGE_UP
+&trans      &kp LEFT_ARROW  &kp UP_ARROW     &bt BT_SEL 1     &bt BT_SEL 2     &none                          &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp KP_DIVIDE    &kp KP_MULTIPLY  &kp RS(BACKSLASH)  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PAGE_DOWN
+&trans      &kp DOWN_ARROW  &kp RIGHT_ARROW  &rgb_ug RGB_ON   &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &kp C_MUTE                    &mmv MOVE_DOWN                   &dklf            &dkrt            &kp MINUS          &kp EQUAL         &kp END            &kp PG_DN
+                                             &rgb_ug RGB_OFF  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD                                                                 &kp RIGHT_SHIFT  &kp RCTRL        &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
