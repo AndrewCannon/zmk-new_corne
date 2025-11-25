@@ -49,27 +49,29 @@
         dkrt: dkrt {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LGUI &kp LCTRL>
-                 , <&macro_tap &kp RIGHT>
-                 , <&macro_release &kp LCTRL &kp LGUI>;
+            bindings =
+                <&macro_press>,
+                <&kp LGUI &kp LCTRL>,
+                <&macro_tap>,
+                <&kp RIGHT>,
+                <&macro_release>,
+                <&kp LCTRL &kp LGUI>;
+
             label = "DKRT";
         };
 
         dklf: dklf {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LGUI &kp LCTRL>
-                 , <&macro_tap &kp LEFT>
-                 , <&macro_release &kp LCTRL &kp LGUI>;
-            label = "DKLF";
-        };
+            bindings =
+                <&macro_press>,
+                <&kp LGUI &kp LCTRL>,
+                <&macro_tap>,
+                <&kp LEFT>,
+                <&macro_release>,
+                <&kp LCTRL &kp LGUI>;
 
-        asdf: asdf {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LCTRL &kp P>;
-            label = "ASDF";
-            wait-ms = <30>;
+            label = "DKLF";
         };
     };
 
