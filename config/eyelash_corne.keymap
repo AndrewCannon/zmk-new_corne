@@ -49,14 +49,14 @@
         dkrt: dkrt {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LEFT_WIN &kp LCTRL &kp RIGHT>;
+            bindings = <&kp LEFT_WIN &kp LCTRL &kp RIGHT>;
             label = "DKRT";
         };
 
         dklf: dklf {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LEFT_WIN &kp LCTRL &kp LEFT>;
+            bindings = <&kp LEFT_WIN &kp LCTRL &kp LEFT>;
             label = "DKLF";
         };
     };
