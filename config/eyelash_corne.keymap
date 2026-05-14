@@ -62,16 +62,30 @@
         bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
     };
 
+    combos {
+        compatible = "zmk,combos";
+        // F + J tapped together within 40ms -> ESC. Only fires on BASE
+        // (so HJKL on NAV still works), and is gated by 100ms prior idle
+        // so it doesn't trip while typing words like "fjord".
+        combo_esc_fj {
+            timeout-ms = <40>;
+            require-prior-idle-ms = <100>;
+            key-positions = <17 23>;
+            bindings = <&kp ESC>;
+            layers = <0>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         base_layer {
             display-name = "BASE";
             bindings = <
-&kp TAB    &kp Q        &kp W        &kp E         &kp R         &kp T                                  &none                                  &kp Y         &kp U          &kp I          &kp O         &kp P             &kp BSPC
-&kp LCTRL  &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G                  &none  &none  &none                                     &kp H         &hmr RSHFT J   &hmr LCTRL K   &hmr LALT L   &hmr LGUI SEMI    &kp SQT
-&kp LSHFT  &kp Z        &kp X        &kp C         &kp V         &kp B         &none                                  &none                     &kp N         &kp M          &kp COMMA      &kp DOT       &kp FSLH          &kp RSHFT
-                                     &kp ESC       &ltq NAV SPACE  &ltq FN TAB                                                                  &ltq SYM RET  &ltq NUM BSPC  &kp DEL
+&caps_word &kp Q        &kp W        &kp E         &kp R         &kp T                                  &none                                  &kp Y         &kp U          &kp I          &kp O         &kp P             &kp BSPC
+&kp LSHFT  &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G                  &none  &none  &none                                     &kp H         &hmr RSHFT J   &hmr LCTRL K   &hmr LALT L   &hmr LGUI SEMI    &kp SQT
+&kp LCTRL  &kp Z        &kp X        &kp C         &kp V         &kp B         &none                                  &none                     &kp N         &kp M          &kp COMMA      &kp DOT       &kp FSLH          &kp RSHFT
+                                     &kp ESC       &ltq NAV TAB    &ltq FN RET                                                                  &ltq SYM SPACE &ltq NUM BSPC &kp DEL
             >;
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
@@ -81,7 +95,7 @@
             bindings = <
 &trans     &trans       &trans       &trans        &trans        &trans                                 &none                                  &trans        &kp HOME       &kp UP         &kp END       &kp PAGE_UP       &trans
 &trans     &kp LGUI     &kp LALT     &kp LCTRL     &kp LSHFT     &trans                 &none  &none  &none                                     &trans        &kp LEFT       &kp DOWN       &kp RIGHT     &kp PAGE_DOWN     &trans
-&trans     &kp LC(Z)    &kp LC(X)    &kp LC(C)     &kp LC(V)     &kp LC(LS(Z)) &none                                  &none                     &trans        &trans         &trans         &trans        &trans            &trans
+&trans     &kp LC(Z)    &kp LC(X)    &kp LC(C)     &kp LC(V)     &kp LC(LS(Z)) &none                                  &none                     &trans        &kp LG(LEFT)   &kp LG(DOWN)   &kp LG(RIGHT) &kp LG(UP)        &trans
                                      &trans        &trans        &trans                                                                          &trans        &trans         &trans
             >;
             sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
@@ -92,7 +106,7 @@
             bindings = <
 &trans     &kp LBKT     &kp N7       &kp N8        &kp N9        &kp RBKT                               &none                                  &trans        &trans         &trans         &trans        &trans            &trans
 &trans     &kp N0       &kp N4       &kp N5        &kp N6        &kp EQUAL              &none  &none  &none                                     &trans        &trans         &trans         &trans        &trans            &trans
-&trans     &kp DOT      &kp N1       &kp N2        &kp N3        &kp MINUS     &none                                  &none                     &trans        &trans         &trans         &trans        &trans            &trans
+&trans     &kp DOT      &kp N1       &kp N2        &kp N3        &kp MINUS     &none                                  &none                     &kp LC(LG(LEFT)) &kp LC(LG(RIGHT)) &trans      &trans        &trans            &trans
                                      &trans        &trans        &trans                                                                          &trans        &trans         &trans
             >;
             sensor-bindings = <&inc_dec_kp LC(TAB) LC(LS(TAB))>;
@@ -102,7 +116,7 @@
             display-name = "SYM";
             bindings = <
 &kp TILDE  &kp EXCL     &kp AT       &kp HASH      &kp DLLR      &kp PRCNT                              &none                                  &kp CARET     &kp AMPS       &kp STAR       &kp PLUS      &kp MINUS         &trans
-&trans     &trans       &kp LBKT     &kp LBRC      &kp LPAR      &kp LT                 &none  &none  &none                                     &kp UNDER     &kp EQUAL      &kp FSLH       &kp BSLH      &kp QMARK         &trans
+&trans     &kp PIPE     &kp LBKT     &kp LBRC      &kp LPAR      &kp LT                 &none  &none  &none                                     &kp UNDER     &kp EQUAL      &kp FSLH       &kp BSLH      &kp QMARK         &trans
 &trans     &kp GRAVE    &kp RBKT     &kp RBRC      &kp RPAR      &kp GT        &none                                  &none                     &kp DQT       &trans         &trans         &trans        &trans            &trans
                                      &kp COLON     &trans        &kp SEMI                                                                        &trans        &trans         &trans
             >;
