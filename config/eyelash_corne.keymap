@@ -93,8 +93,8 @@
         nav_layer {
             display-name = "NAV";
             bindings = <
-&trans     &trans       &trans       &trans        &trans        &trans                                 &none                                  &trans        &kp HOME       &kp UP         &kp END       &kp PAGE_UP       &trans
-&trans     &kp LGUI     &kp LALT     &kp LCTRL     &kp LSHFT     &trans                 &none  &none  &none                                     &trans        &kp LEFT       &kp DOWN       &kp RIGHT     &kp PAGE_DOWN     &trans
+&trans     &trans       &trans       &trans        &kp PSCRN     &kp LG(LS(T))                          &none                                  &trans        &kp HOME       &kp UP         &kp END       &kp PAGE_UP       &trans
+&trans     &trans       &trans       &trans        &trans        &trans                 &none  &none  &none                                     &trans        &kp LEFT       &kp DOWN       &kp RIGHT     &kp PAGE_DOWN     &trans
 &trans     &kp LC(Z)    &kp LC(X)    &kp LC(C)     &kp LC(V)     &kp LC(LS(Z)) &none                                  &none                     &trans        &kp LG(LEFT)   &kp LG(DOWN)   &kp LG(RIGHT) &kp LG(UP)        &trans
                                      &trans        &trans        &trans                                                                          &trans        &trans         &trans
             >;
@@ -128,7 +128,7 @@
             bindings = <
 &studio_unlock &kp F1   &kp F2       &kp F3        &kp F4        &kp F5                                 &none                                  &kp F6        &kp F7         &kp F8         &kp F9        &kp F10           &kp F11
 &trans     &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4           &none  &none  &none                                     &kp C_PREV    &kp C_VOL_DN   &kp C_VOL_UP   &kp C_NEXT    &kp C_PP          &kp F12
-&trans     &rgb_ug RGB_TOG &rgb_ug RGB_EFF &rgb_ug RGB_BRI &rgb_ug RGB_BRD &bt BT_CLR &none                                  &none              &kp PSCRN     &kp C_MUTE     &trans         &trans        &bootloader       &sys_reset
+&trans     &rgb_ug RGB_TOG &rgb_ug RGB_EFF &rgb_ug RGB_BRI &rgb_ug RGB_BRD &bt BT_CLR &none                                  &none              &trans        &kp C_MUTE     &trans         &trans        &bootloader       &sys_reset
                                      &trans        &trans        &trans                                                                          &trans        &trans         &trans
             >;
             sensor-bindings = <&rgb_encoder>;
